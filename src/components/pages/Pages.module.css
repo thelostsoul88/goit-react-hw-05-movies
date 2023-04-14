@@ -1,0 +1,59 @@
+.homeLi {
+  margin-bottom: 5px;
+}
+.homeLink {
+  text-decoration: none;
+}
+.backButton {
+  color: unset;
+  margin-left: 15px;
+  text-decoration: none;
+}
+.details {
+  margin-left: 10px;
+  margin-top: 10px;
+  display: flex;
+}
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 15px;
+}
+.detailsContainer:last-child {
+  max-width: 800px;
+}
+.additionalContainer {
+  margin-top: 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.additionalContainer > ul > li > a {
+  text-decoration: none;
+}
+.additionalP {
+  margin-left: 15px;
+}
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  text-align: center;
+}
+.castItem {
+  border: 1px solid black;
+}
+.castItem > p {
+  font-size: 14px;
+}
+.reviewsContainer > h2 {
+  margin-left: 20px;
+}
+.reviewsContainer > ul {
+  list-style: none;
+}
+.noReview {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
