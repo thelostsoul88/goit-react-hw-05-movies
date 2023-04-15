@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
-import css from './Pages.module.css';
 import fetchCastMovie from 'services/cast-movies-api';
+// import css from './Pages.module.css';
 
 const BASE_URL = 'http://image.tmdb.org/t/p/w154';
 const defaultImg =
@@ -11,7 +11,6 @@ const defaultImg =
 const Cast = () => {
   const { movieId } = useParams();
   const [castMovies, setCastMovies] = useState([]);
-  //   const [disable, setDisable] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -24,17 +23,16 @@ const Cast = () => {
         );
       }
     })();
-    // setDisable(true);
   }, [movieId]);
 
   return (
     <>
-      <ul className={css.castList}>
+      <ul className="flex flex-wrap gap-4 justify-center mt-3 text-center mb-3">
         {castMovies.map(({ name, profile_path, id }) => (
-          <li key={id} className={css.castItem}>
+          <li key={id} className="border border-black">
             <img
               width="154"
-              height="225"
+              height="254"
               src={profile_path ? BASE_URL + profile_path : defaultImg}
               alt={name}
             />
@@ -42,7 +40,6 @@ const Cast = () => {
           </li>
         ))}
       </ul>
-      {/* {disable && <Link to="">Close Cast</Link>} */}
     </>
   );
 };

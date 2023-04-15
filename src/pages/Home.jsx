@@ -1,13 +1,14 @@
+import MoviesItems from 'components/MoviesItems/MoviesItems';
 import Loader from 'components/utils/Loader';
 import { useState, useEffect } from 'react';
 import { toast } from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import fetchTrendingMovie from 'services/trending-movies-api';
-import css from './Pages.module.css';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     (async () => {
@@ -32,16 +33,8 @@ const Home = () => {
 
   return (
     <>
-      <h1>Trending Movies</h1>
-      <ol>
-        {movies.map(movie => (
-          <li key={movie.id} className={css.homeLi}>
-            <Link to={`movies/${movie.id}`} className={css.homeLink}>
-              {movie.title}
-            </Link>
-          </li>
-        ))}
-      </ol>
+      <h1 className="font-bold text-2xl mb-3">Trending Movies</h1>
+      <MoviesItems movies={movies} location={location} />
       {isLoading && <Loader />}
     </>
   );
