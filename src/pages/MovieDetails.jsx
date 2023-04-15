@@ -46,20 +46,24 @@ const MovieDetails = () => {
               <img src={BASE_URL + poster_path} alt={title} />
             </div>
             <div className="flex flex-col gap-8 ml-5 last:max-w-[60%]">
-              <h2>{title}</h2>
-              <p>Release Date: {release_date}</p>
-              <p>Vote Average: {vote_average.toFixed(2)}</p>
-              <p>Genres: {genres.map(genre => genre.name).join(', ')}</p>
-              <p>Overview: {overview}</p>
+              <h2 className="font-bold text-2xl">{title}</h2>
+              <p className="text-xl">Release Date: {release_date}</p>
+              <p className="text-xl"> IMDb: {vote_average.toFixed(2)}</p>
+              <p className="text-xl">
+                Genres: {genres.map(genre => genre.name).join(', ')}
+              </p>
+              <p className="text-xl">Overview: {overview}</p>
             </div>
           </div>
           <div className="border-b border-t border-black mt-2 mb-10">
-            <p className="ml-5 mt-1 mb-1 font-bold">Additional information</p>
+            <p className="ml-5 mt-1 mb-1 font-bold text-xl">
+              Additional information
+            </p>
             <ul>
               <li>
                 <Link
                   to="cast"
-                  className="ml-5 hover:text-green-800 focus:text-green-800"
+                  className="ml-5 hover:text-green-800 focus:text-green-800 text-xl"
                 >
                   Cast
                 </Link>
@@ -67,7 +71,7 @@ const MovieDetails = () => {
               <li>
                 <Link
                   to="reviews"
-                  className="ml-5 hover:text-green-800 focus:text-green-800"
+                  className="ml-5 hover:text-green-800 focus:text-green-800 text-xl"
                 >
                   Reviews
                 </Link>
