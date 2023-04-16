@@ -1,9 +1,9 @@
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
+import { fetchTrendingMovie } from 'services/movies-api';
 import MoviesItems from 'components/MoviesItems/MoviesItems';
 import Loader from 'components/utils/Loader';
-import { useState, useEffect } from 'react';
-import { toast } from 'react-hot-toast';
-import { useLocation } from 'react-router-dom';
-import fetchTrendingMovie from 'services/trending-movies-api';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);

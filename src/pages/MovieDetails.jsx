@@ -1,7 +1,7 @@
-import fetchDetailsMovie from 'services/details-movies-api';
 import { useState, useEffect, useRef } from 'react';
 import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
+import { fetchDetailsMovie } from 'services/movies-api';
 import Loader from 'components/utils/Loader';
 // import css from './Pages.module.css';
 

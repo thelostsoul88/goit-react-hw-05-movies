@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
-import fetchReviewsMovie from 'services/reviews-movies-api';
-// import css from './Pages.module.css';
+import { fetchReviewsMovie } from 'services/movies-api';
 
 const Reviews = () => {
   const { movieId } = useParams();

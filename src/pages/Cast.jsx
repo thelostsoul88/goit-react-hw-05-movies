@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
-import fetchCastMovie from 'services/cast-movies-api';
+import { fetchCastMovie } from 'services/movies-api';
 // import css from './Pages.module.css';
 
 const BASE_URL = 'http://image.tmdb.org/t/p/w154';
