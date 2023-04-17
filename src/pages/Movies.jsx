@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
+import {FcSearch} from 'react-icons/fc'
 import { fetchSearchMovie } from 'services/movies-api';
 import MoviesItems from 'components/MoviesItems/MoviesItems';
 
@@ -43,19 +44,19 @@ const Movies = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='flex justify-center'>
         <input
           type="text"
-          placeholder=" Search films"
+          placeholder=" Search movies"
           autoComplete="off"
           name="text"
-          className="ml-12 border border-blue-300 p-1 rounded mb-5 outline-none"
+          className="border border-blue-300 pt-1 pb-1 pr-4 pl-1 rounded mb-5 outline-none"
         />
         <button
           type="submit"
-          className="bg-blue-300 p-1 ml-2 text-white hover:text-stone-200 rounded"
+          className="bg-blue-300 p-1 ml-2 text-white hover:text-stone-200 rounded h-8 w-12 flex justify-center items-center mt-0.5"
         >
-          search
+          <FcSearch/>
         </button>
       </form>
       {movies && <MoviesItems movies={movies} location={location} />}

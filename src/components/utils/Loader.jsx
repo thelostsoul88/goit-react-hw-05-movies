@@ -1,15 +1,14 @@
-import { Vortex } from 'react-loader-spinner';
+import { Dna } from 'react-loader-spinner';
 const Loader = () => {
   return (
     <div className="flex justify-center">
-      <Vortex
+      <Dna
         visible={true}
         height="80"
         width="80"
-        ariaLabel="vortex-loading"
+        ariaLabel="dna-loading"
         wrapperStyle={{}}
-        wrapperClass="vortex-wrapper"
-        colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
+        wrapperClass="dna-wrapper"
       />
     </div>
   );
