@@ -6,9 +6,7 @@ axios.defaults.params = {
 };
 
 export const fetchTrendingMovie = async () => {
-  const { data } = await axios.get(
-    'https://api.themoviedb.org/3/trending/movie/day'
-  );
+  const { data } = await axios.get('3/trending/movie/day');
   return data;
 };
 
