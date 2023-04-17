@@ -16,7 +16,7 @@ const Movies = () => {
       try {
         const { results } = await fetchSearchMovie(query);
         if (!results.length) {
-          toast.info('There are no movies for your request.');
+          toast.error('There are no movies for your request.');
           return;
         }
         setMovies(results);
@@ -49,7 +49,7 @@ const Movies = () => {
           placeholder=" Search films"
           autoComplete="off"
           name="text"
-          className="ml-7 border border-blue-300 p-1 rounded mb-5 outline-none"
+          className="ml-12 border border-blue-300 p-1 rounded mb-5 outline-none"
         />
         <button
           type="submit"
