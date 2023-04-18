@@ -9,6 +9,9 @@
 /.pnp
 .pnp.js
 
+/.tailwind
+tailwind.config.js
+
 # testing
 /coverage
 

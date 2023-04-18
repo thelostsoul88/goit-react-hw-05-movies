@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <>
-      <h1 className="font-bold text-3xl mb-5 text-center">Trending Movies</h1>
+      <h1 className="font-bold text-4xl mb-5 text-center">Trending Movies</h1>
       <MoviesItems movies={movies} location={location} />
       {isLoading && <Loader />}
     </>
