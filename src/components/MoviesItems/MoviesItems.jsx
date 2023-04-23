@@ -7,27 +7,27 @@ const MoviesItems = ({ movies, location }) => {
   const locationItem = useLocation();
   const to = location.pathname;
   return (
-    <>
-      <ul className="mb-5 flex flex-wrap">
-        {movies.map(({ id, poster_path, title }) => (
-          <Link
-            key={id}
-            to={to !== '/' ? `${id}` : `movies/${id}`}
-            state={{ from: locationItem }}
-            className="hover:text-stone-400  border border-black text-center ml-10 mb-5 rounded"
-          >
-          <li>
-            <img
-              src={poster_path ? BASE_URL + poster_path : defaultImg}
-              alt={title}
-              width="200"
-            />
+    <div className="mb-5 flex flex-wrap">
+      {movies.map(({ id, poster_path, title }) => (
+        <Link
+          key={id}
+          to={to !== '/' ? `${id}` : `movies/${id}`}
+          state={{ from: locationItem }}
+          className="hover:text-stone-400  border border-black text-center ml-10 mb-5 rounded"
+        >
+          <ul>
+            <li>
+              <img
+                src={poster_path ? BASE_URL + poster_path : defaultImg}
+                alt={title}
+                width="200"
+              />
               <p className="ml-5 mt-1 w-40 h-24">{title}</p>
-          </li>
-          </Link>
-        ))}
-      </ul>
-    </>
+            </li>
+          </ul>
+        </Link>
+      ))}
+    </div>
   );
 };
 export default MoviesItems;
